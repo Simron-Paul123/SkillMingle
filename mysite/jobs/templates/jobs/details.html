@@ -1,0 +1,21 @@
+{% extends 'jobs/base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2>{{ job.Designation }}</h2>
+                    <b>Description:</b> {{ job.Description }}
+                    <br><b>Experience:</b> {{ job.Experience }}
+                    <br><b>Skills:</b> {{ job.Skills }}
+                    <br><br><div class="col-sm-offset-2 col-sm-10">
+                        <a class="btn btn-success" href="{% url 'apply' job.id %}">Apply</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
